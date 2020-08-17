@@ -25,6 +25,7 @@
 <script>
 import Vue from 'vue'
 import { Button, Row } from 'element-ui'
+import { changeColor } from './util'
 Vue.use(Button).use(Row)
 
 export default {
@@ -38,7 +39,9 @@ export default {
     globalChange () {
       this.color = this.$root.color
     },
-    injectChange () {}
+    injectChange () {
+      changeColor()
+    }
   }
 }
 </script>
